@@ -11,9 +11,8 @@ const schema = mongoose.Schema({
     phone: {type:String, required:true},
     date_added:{type: Date, default:Date.now},
     address: {type: String, required:true},
-    userType: {type :Number, required:true},
     token: {type:String},
-    wallet: {type: Number, default: 0}
+    cart: {type: Object, default: 0}
 }, {
     toJSON: {
         transform: (doc, ret) => {

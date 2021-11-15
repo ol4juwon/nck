@@ -46,8 +46,8 @@ const setupExpress = () => {
     app.set('port', port);
     console.log("Starting up Products", port, process.env.APP_NAME);
 
-    console.log("Init cron", process.env.NODE_ENV);
-    require("../services/CronService");
+    // console.log("Init cron", process.env.NODE_ENV);
+    // require("../services/CronService");
 
     server.listen(port);
     server.setTimeout(500000);

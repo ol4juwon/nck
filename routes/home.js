@@ -5,7 +5,7 @@ const router = require("express").Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('index', { title: 'Trove Test' });
+    res.render('index', { title: 'NCK TEST' });
 });
 
 router.get('/healthcheck', (req, res) => {
