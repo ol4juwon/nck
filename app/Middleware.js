@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 
 exports.validateUser = async (req,res,next) => {
     let userToken  = req.headers['auth-token'] || req.headers['authorization']
-    if(!userToken) return createErrorResponse(res, "You are not authorized to use this service", 403);
+    if(!userToken) return createErrorResponse(res, "You are not authorized to use this app", 403);
 
     if(userToken.startsWith('Bearer ')) userToken = userToken.slice( 7 , userToken.length);
 
