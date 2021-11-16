@@ -5,8 +5,9 @@ const inventory = require("./InventoryModel");
 exports.getProducts = async ( payload ) => {
 
     const allProdcuts = await inventory.find();
-
-    return {data : allProdcuts};
+const {error} = allProdcuts;
+if(error) return{ error: error};
+    return { data: allProducts};
 
 }
 exports.updateProduct = async ( payload ) => {

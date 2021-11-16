@@ -3,9 +3,10 @@ const inventoryService = require("./InventoryService");
 
 
 exports.getProducts = async (req,res) => {
-const allProducts = await inventoryService.getProducts();
+const {error, data} = await inventoryService.getProducts();
+if(error) createErrorResponse( res, error, 400);
 
-return createSuccessResponse(res,allProducts,202)
+return createSuccessResponse(res,data,200)
 }
 
 exports.addProducts = async (req,res) => {
