@@ -7,7 +7,7 @@ exports.getProducts = async ( payload ) => {
     const allProdcuts = await inventory.find();
 const {error} = allProdcuts;
 if(error) return{ error: error};
-    return { data: allProducts};
+    return { data: allProdcuts};
 
 }
 exports.updateProduct = async ( payload ) => {
