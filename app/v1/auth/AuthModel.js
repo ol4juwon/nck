@@ -8,9 +8,9 @@ const schema = mongoose.Schema({
     lastName: { type: String, required:true,min: 3,max:255},
     email: { type: String,required:true},
     password: { type: String, required:true,min: 8,max:64},
-    phone: {type:String, required:true},
+    phone: {type:String},
     date_added:{type: Date, default:Date.now},
-    address: {type: String, required:true},
+    address: {type: String},
     token: {type:String},
     cart: {type: Object, default: 0}
 }, {
