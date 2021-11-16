@@ -19,3 +19,11 @@
   5. Delete Product
 -Cart
   1. Add to Cart
+
+-[x] login
+-[x] Register
+-[x] Add Product
+-[x] Get All Products
+-[ ] Get Single Product
+-[x] Update Product
+-[ ] Delete Product 

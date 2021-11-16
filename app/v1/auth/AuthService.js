@@ -63,11 +63,7 @@ exports.createUser = async (payload) => {
     email,
     firstName,
     lastName,
-    password,
-    phone,
-    address,
-    img_src,
-    userType,
+    password
   } = payload;
 
   // check if user exists
@@ -81,11 +77,7 @@ exports.createUser = async (payload) => {
     firstName: firstName,
     lastName: lastName,
     email: email,
-    password: hashedPassword,
-    address: address,
-    phone: phone,
-    img_src: img_src,
-    userType: userType,
+    password: hashedPassword
   });
   const token = jwt.sign(
     {
