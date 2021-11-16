@@ -23,14 +23,14 @@
   1. Add to Cart [/add]
 
 ## TASKS
--[x] login
--[x] Register
--[x] Add Product
--[x] Get All Products
--[ ] Get Single Product
--[x] Update Product
--[ ] Delete Product
--[x] Deploy to Heroku
+- [x] login
+- [x] Register
+- [x] Add Product
+- [x] Get All Products
+- [ ] Get Single Product
+- [x] Update Product
+- [ ] Delete Product
+- [x] Deploy to Heroku
 
 ## Links
 - [Home](https://nck-test.herokuapp.com)
