@@ -2,11 +2,12 @@
 const mongoose = require('mongoose');
 let mongoosePaginate = require('mongoose-paginate');
 
-
+const productSchema = mongoose.Schema({
+    productName: { type: String, required: true},
+    quantity:{ type: Number,required: true},
+})
 const schema = mongoose.Schema({
-
-        productName: { type: String, required:true},
-        quantity: {type: Number, required: true},
+        cartItems: { type: [productSchema], required: true},
     userId: {type: String, required : true}
     },{
         toJSON :{
@@ -20,10 +21,10 @@ const schema = mongoose.Schema({
 
 )
 
-schema.post('save', function(products){
-    console.log("Post save ", products);
+schema.post('save', function(carts){
+    console.log("Post save ", carts);
 })
 
 schema.index({"$**": "text"});
 schema.plugin(mongoosePaginate)
-module.exports = mongoose.model('products',schema);
+module.exports = mongoose.model('carts',schema);

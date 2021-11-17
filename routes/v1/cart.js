@@ -1,9 +1,9 @@
 "use strict"
 const router = require('express').Router();
-const cartController = require("../../app/v1/cart/AuthController");
-const cartValidator= require("../../app/v1/cart/AuthValidator")
+const cartController = require("../../app/v1/cart/cartController");
+// const cartValidator= require("../../app/v1/cart/AuthValidator")
 const {validateUser} = require("../../app/Middleware")
 
-router.post("/add",validateUser,cartValidator.addtoCart, cartController.addToCart);
+router.post("/add",validateUser, cartController.addToCart);
 
 module.exports = router

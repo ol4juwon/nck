@@ -10,6 +10,28 @@ if(error) return{ error: error};
     return { data: {products : allProdcuts}};
 
 }
+
+exports.getSingleProduct = async (payload) => {
+    console.log("Get 1 name", payload)
+
+    const singleProduct = await inventory.findOne({productName : new RegExp(`^${payload}`,'i' )});
+    console.log("Single Product", singleProduct);
+    // const {error} = singleProduct;
+    // if(error) return {error: error};
+    return {data : {product: singleProduct}}
+}
+
+exports.deleteProduct = async (payload) => {
+
+    console.log("Del name :",  payload);
+const {name} = payload;
+    const  deleteProduct = await inventory.deleteOne({productName : new RegExp(`^${name}`,'i' )})
+const {error} = deleteProduct;
+    if(error) return {error: error};
+    return { data: deleteProduct}
+}
+
+
 exports.updateProduct = async ( payload ) => {
     const {productName, price, quantity} = payload
     const productExist  = await inventory.findOneAndUpdate({productName}, {price: price, currentStock: quantity},{ new : true}).catch((e) => {console.log(e)})

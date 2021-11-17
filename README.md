@@ -27,9 +27,9 @@
 - [x] Register
 - [x] Add Product
 - [x] Get All Products
-- [ ] Get Single Product
+- [x] Get Single Product
 - [x] Update Product
-- [ ] Delete Product
+- [x] Delete Product
 - [x] Deploy to Heroku
 
 ## Links
@@ -38,5 +38,4 @@
 - [Health check](https://nck-test.herokuapp.com/healthcheck)
 
 :grin:
-
-:rocket:
+:rocket: :rocket: :rocket: :rocket: :rocket: :rocket:

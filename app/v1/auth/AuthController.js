@@ -7,7 +7,7 @@ exports.register = async (req, res, next) => {
   const payload = req.body;
   const { error, data } = await authService.createUser(payload);
 
-  if (error) return createErrorResponse(res, error, 4);
+  if (error) return createErrorResponse(res, error, 400);
 
   return createSuccessResponse(res, data, 201);
 };

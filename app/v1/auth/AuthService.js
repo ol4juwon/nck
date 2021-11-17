@@ -55,7 +55,7 @@ exports.login = async (payload) => {
       expiresIn: "3h",
     }
   );
-  return { data: { token: token } };
+  return { data: { token: token , userID: user._id, name: user.firstName} };
 };
 
 exports.createUser = async (payload) => {
