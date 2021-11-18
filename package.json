@@ -33,7 +33,7 @@
     "mongoose-paginate": "^5.0.3",
     "nanoid": "^3.1.30",
     "node-cron": "^3.0.0",
-    "nodemon": "^2.0.14",
+    "nodemon": "^2.0.15",
     "supertest": "^6.1.6"
   },
   "engines": {

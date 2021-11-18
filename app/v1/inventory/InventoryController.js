@@ -33,9 +33,17 @@ exports.updateProduct = async (req, res) => {
 
 exports.deleteProduct = async (req, res) => {
     const payload = req.query
+    const clientID = req.headers.clientid;
+    console.log( "client id ",clientID)
+
+    if(process.env.CLIENTID === clientID ){
     const {error, data} =  await inventoryService.deleteProduct(payload);
 
     if(error) return createErrorResponse(res, error, 400);
 
     return createSuccessResponse(res, data, 200);
+    }
+    else{
+        return createErrorResponse(res, "You're not an admin", 401);
+    }
 }

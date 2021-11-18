@@ -35,7 +35,7 @@ app.use((req,res,next) => {
         res.removeListener('error', errorFn)
     };
     const logFn = (a,b,c) => {
-        console.log("Response", requestId);
+        console.log("Response log", requestId);
         console.log("Time Ended", moment().toISOString(true));
         cleanup();
         console.log( `[${requestId}] Response ${url}`,`${res.statusCode} ${res.statusMessage};`, {
@@ -52,6 +52,7 @@ app.use((req,res,next) => {
 
     const abortFn = () => {
         cleanup();
+        console.log("Request aborted")
         console.log("Time Ended", moment().toISOString(true));
         console.log( `Response ${url}`,`${res.statusCode} ${res.statusMessage}; ${res.get('Content-Length') || 0}b sent || Request aborted by the client`, {
             type: "request-response",
