@@ -32,6 +32,7 @@
 - [x] Delete Product
 - [x] Deploy to Heroku
 - [x] Client-id for Admin roles
+- [x] Add to cart
 
 ## Links
 - [Home](https://nck-test.herokuapp.com)
