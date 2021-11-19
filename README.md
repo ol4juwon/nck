@@ -1,6 +1,6 @@
 #  ***NCK API V1***
 ## Language and frameworks
-- Nodejs 
+- Nodejs (12.x)
 - MongoDB
 - Expressjs
 - Puppeteer
@@ -39,5 +39,18 @@
 - [Api v1 Base URl](https://nck-test.herokuapp.com/api/v1)
 - [Health check](https://nck-test.herokuapp.com/healthcheck)
 
+## Installation instructions
+- Download the code from github (Main branch)
+- npm i to install dependencies
+- npm start to  start application
+
+## Environment Variables
+- NODE_ENV
+- APP_NAME
+- Port
+- MONGODB_URL
+- TOKEN_SECRET
+
+***HAPPY CODING***
 :grin:
 :rocket: :rocket: :rocket: :rocket: :rocket: :rocket:
