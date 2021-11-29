@@ -33,6 +33,11 @@
 - [x] Deploy to Heroku
 - [x] Client-id for Admin roles
 - [x] Add to cart
+- [ ] Delete from cart
+- [ ] Add multiple products
+- [ ] Add product images
+- [ ] Edit user Details
+- [ ] enable 2fa
 
 ## Links
 - [Home](https://nck-test.herokuapp.com)
